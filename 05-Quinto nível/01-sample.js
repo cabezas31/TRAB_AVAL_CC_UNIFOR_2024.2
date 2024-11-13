@@ -65,6 +65,7 @@ function calcular(operacao, numero1, numero2) {
     } else if (operacao === "divisão"){
         contador = numero1 / numero2;
     }
+    console.log("Resultado do cálculo exigido:", contador);
     return contador;
 }
 

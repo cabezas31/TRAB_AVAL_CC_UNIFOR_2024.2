@@ -1,15 +1,13 @@
-function h(a) {
-    let b = [];
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] % 2 === 0) {
-            b.push(a[i]);
+function numeroPar(numeros) {
+    let numerosPares = [];
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            numerosPares.push(numeros[i]);
         }
     }
-    return b;
+    return numerosPares;
 }
 
-let x = [1, 2, 3, 4, 5, 6];
-let y = h(x);
-console.log(y);
-
-teste
+let conjuntoNumeros = [1, 2, 3, 4, 5, 6];
+let conjuntoNumerosPares= numeroPar(conjuntoNumeros);
+console.log(conjuntoNumerosPares);
