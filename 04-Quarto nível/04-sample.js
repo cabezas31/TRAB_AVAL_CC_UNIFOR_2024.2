@@ -12,12 +12,12 @@ async function buscarPersonagem(id) {
         
         const { name: namePersonagem } = personagem;
         if (!namePersonagem) {
-            throw new Error('Nome do personagem não encontrado.');
+            throw new Error("Nome do personagem não encontrado.");
         }
 
         console.log(namePersonagem);
     } catch (erro) {
-        console.error('Erro ao buscar o personagem:', erro.message);
+        console.error("Erro ao buscar o personagem:", erro.message);
     }
 }
 

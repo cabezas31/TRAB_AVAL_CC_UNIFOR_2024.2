@@ -1,11 +1,11 @@
 async function buscarEFiltrarPessoas() {
     try {
-        const resposta = await fetch('https://swapi.dev/api/people/');
+        const resposta = await fetch("https://swapi.dev/api/people/");
         const dados = await resposta.json();
 
         const { results: dadosResults } = dados;
 
-        const letraInicial = 'L';
+        const letraInicial = "L";
 
         const pessoasFiltradas = dados.results.filter(pessoa => pessoa.name.startsWith(letraInicial));
 
@@ -19,7 +19,7 @@ async function buscarEFiltrarPessoas() {
         console.log(`Total de pessoas encontradas: ${totalPessoas}`);
 
     } catch (erro) {
-        console.error('Erro ao buscar pessoas:', erro);
+        console.error("Erro ao buscar pessoas:", erro);
     }
 }
 

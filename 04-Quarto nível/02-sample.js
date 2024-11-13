@@ -55,4 +55,6 @@ function exibirTituloDoFilme(filme) {
       <div class="alert alert-success" role="alert">
         <strong>Título do Filme:</strong> ${tituloFilmeFormat}<br>
       </div>`;
-}
+};
+
+buscarFilme();

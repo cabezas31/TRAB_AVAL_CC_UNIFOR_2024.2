@@ -1,12 +1,12 @@
-let nU = "Pedro";
-let iA = 25;
-let iU = true;
+const nU = "Pedro";
+const iA = 25;
+const iU = true;
 
 function dU(nU, iA, iU) {
     if (iU) {
-        console.log(nU + " tem " + iA + " anos e está ativo.");
+        console.log(`${nU  } tem ${  iA  } anos e está ativo.`);
     } else {
-        console.log(nU + " está inativo.");
+        console.log(`${nU  } está inativo.`);
     }
 }
 

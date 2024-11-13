@@ -1,6 +1,6 @@
-let a = "João";
-let b = "Ana";
-let c = "Carlos";
+const a = "João";
+const b = "Ana";
+const c = "Carlos";
 
 function p() {
     console.log(a);

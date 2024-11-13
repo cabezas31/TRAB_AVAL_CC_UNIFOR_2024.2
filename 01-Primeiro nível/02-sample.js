@@ -1,4 +1,4 @@
-let a = true;
+const a = true;
 
 function verAc(u) {
     if (a && u.isAdmin) {
@@ -8,5 +8,5 @@ function verAc(u) {
     }
 }
 
-let u = { nome: "João", admin: true };
+const u = { nome: "João", admin: true };
 verAc(u);

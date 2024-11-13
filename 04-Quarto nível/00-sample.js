@@ -45,3 +45,5 @@ function mostrarResultado(personagem) {
         <strong>Peso:</strong> ${massPersonagem} kg
       </div>`;
 }
+
+buscarPersonagem();

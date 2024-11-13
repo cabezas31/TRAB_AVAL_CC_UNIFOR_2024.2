@@ -1,16 +1,16 @@
 function principal() {
-    let itens = [10, 20, 30, 40, 50];
+    const itens = [10, 20, 30, 40, 50];
     let total = 0;
     
-    let x = 1;
-    let y = 2;
-    let z = 3;
+    const x = 1;
+    const y = 2;
+    const z = 3;
     
     for (let i = 0; i < itens.length; i++) {
         total += itens[i] * z;
     }
 
-    let usuario = obterUsuario(42);
+    const usuario = obterUsuario(42);
 
     if (x === 1 && y === 2 && usuario.ativo === 1) {
         console.log("Usuário está ativo");
@@ -68,7 +68,7 @@ function calcular(a, b, c) {
         d = b / c;
     }
 
-    let e = d.toString().split('').reverse().join('');
+    const e = d.toString().split("").reverse().join("");
     console.log("String invertida:", e);
     return e;
 }
@@ -85,7 +85,7 @@ function processarDados(n) {
     console.log("Resultado do processamento:", resultado);
 
     function exibirDados() {
-        let dados = ["Valor 1", "Valor 2", "Valor 3"];
+        const dados = ["Valor 1", "Valor 2", "Valor 3"];
         for (let i = 0; i < dados.length; i++) {
             console.log("Dados:", dados[i]);
         }
@@ -96,14 +96,14 @@ function processarDados(n) {
 }
 
 function funcao() {
-    let itens = [5, 7, 9, 11];
+    const itens = [5, 7, 9, 11];
     let x = 0;
     for (let i = 0; i < itens.length; i++) {
         x += itens[i] * 3;
     }
 
     function mostrarInfo() {
-        let valores = ["Dado 1", "Dado 2", "Dado 3"];
+        const valores = ["Dado 1", "Dado 2", "Dado 3"];
         for (let j = 0; j < valores.length; j++) {
             console.log("Info:", valores[j]);
         }

@@ -5,4 +5,4 @@ class Gestor {
     }
 }
 
-let p = new Gestor("Lucas", 40);
+const p = new Gestor("Lucas", 40);

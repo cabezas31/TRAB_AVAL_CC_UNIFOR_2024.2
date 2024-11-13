@@ -53,3 +53,5 @@ function exibirNomePlaneta(planeta) {
         <strong>Nome do Planeta:</strong> ${planetaName}<br>
       </div>`;
 }
+
+buscarPlaneta();
