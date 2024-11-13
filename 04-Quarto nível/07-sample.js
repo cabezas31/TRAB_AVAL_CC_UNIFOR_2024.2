@@ -1,8 +1,17 @@
-async function buscarEspecie() {
-    const resposta = await fetch("https://swapi.dev/api/species/1/");
-    const especie = await resposta.json();
-
-    console.log(especie.average_lifespan.toUpperCase());
+function exibirTempoDeVidaMedio(tempoDeVidaMedio) {
+    if (tempoDeVidaMedio) {
+        console.log("Tempo de vida médio da espécie:", tempoDeVidaMedio.toUpperCase());
+    } else {
+        console.log("Não foi possível obter o tempo de vida médio da espécie.");
+    }
 }
 
-buscarEspecie();
+async function buscarEExibirTempoDeVidaMedio() {
+    const dadosEspecie = await buscarDadosDaEspecie(ID_ESPECIE_ALVO);
+    
+    if (dadosEspecie) {
+        exibirTempoDeVidaMedio(dadosEspecie.average_lifespan);
+    }
+}
+
+buscarEExibirTempoDeVidaMedio();
