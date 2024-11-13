@@ -6,11 +6,11 @@ function calcularSalarioFuncionario(horasTrabalhadas, valorHora, cargo) {
         gerente: 1000,
         supervisor: 500,
         funcionario: 200,
-    }
+    };
 
-    if (cargo === 'gerente') {
+    if (cargo === "gerente") {
         salarioComBonus = salarioBase + bonus[gerente];
-    } else if (cargo === 'supervisor') {
+    } else if (cargo === "supervisor") {
         salarioComBonus = salarioBase + bonus[supervisor];
     } else {
         salarioComBonus = salarioBase + bonus[funcionario];
@@ -23,7 +23,7 @@ function calcularSalarioFuncionario(horasTrabalhadas, valorHora, cargo) {
         alto: 0.27,
         medio: 0.18,
         baixo: 0.11,
-    }
+    };
 
     if (salarioComDesconto > 5000) {
         salarioFinal = salarioComDesconto - (salarioComDesconto * desconto[alto]);
@@ -36,5 +36,5 @@ function calcularSalarioFuncionario(horasTrabalhadas, valorHora, cargo) {
     return salarioFinal;
 }
 
-const salario = calcularSalarioFuncionario(160, 25, 'gerente');
+const salario = calcularSalarioFuncionario(160, 25, "gerente");
 console.log(`O salário final é: ${salario}`);

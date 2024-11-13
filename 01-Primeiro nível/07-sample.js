@@ -1,8 +1,8 @@
-let nome = "Carlos";
-let idade= 32;
+const nome = "Carlos";
+const idade= 32;
 
 function identificar(nome, idade) {
-    console.log(nome + " tem " + idade + " anos.");
+    console.log(`${nome  } tem ${  idade  } anos.`);
 }
 
 identificar(nome, idade);

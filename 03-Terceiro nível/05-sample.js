@@ -1,9 +1,10 @@
 async function buscarVeiculosECalcularCusto() {
     try {
-        const resposta = await fetch('https://swapi.dev/api/vehicles/');
+        const resposta = await fetch("https://swapi.dev/api/vehicles/");
         const dados = await resposta.json();
 
-        const veiculosCaros = dados.results.filter(veiculo => parseInt(veiculo.cost_in_credits) > 10000);
+        const mediaCreditos = 10000;
+        const veiculosCaros = dados.results.filter(veiculo => parseInt(veiculo.cost_in_credits) > mediaCreditos);
 
         console.log("Veículos caros (mais de 10.000 créditos):");
         veiculosCaros.forEach(veiculo => {
@@ -17,7 +18,7 @@ async function buscarVeiculosECalcularCusto() {
         console.log(`Custo total dos veículos caros: ${custoTotal} créditos`);
 
     } catch (erro) {
-        console.error('Erro ao buscar veículos:', erro);
+        console.error("Erro ao buscar veículos:", erro);
     }
 }
 

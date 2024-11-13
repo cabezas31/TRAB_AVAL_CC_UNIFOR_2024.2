@@ -30,11 +30,20 @@ function mostrarErro(mensagem, tipo) {
 }
 
 function mostrarResultado(personagem) {
+    const { 
+        name: namePersonagem, 
+        height: heightPersonagem, 
+        mass: massPersonagem 
+    } = personagem;
+
     const mensagemDiv = document.getElementById("mensagem");
+    
     mensagemDiv.innerHTML = `
       <div class="alert alert-success" role="alert">
-        <strong>Nome:</strong> ${personagem.name}<br>
-        <strong>Altura:</strong> ${personagem.height} cm<br>
-        <strong>Peso:</strong> ${personagem.mass} kg
+        <strong>Nome:</strong> ${namePersonagem}<br>
+        <strong>Altura:</strong> ${heightPersonagem} cm<br>
+        <strong>Peso:</strong> ${massPersonagem} kg
       </div>`;
 }
+
+buscarPersonagem();

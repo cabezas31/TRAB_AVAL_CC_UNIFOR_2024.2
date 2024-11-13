@@ -1,6 +1,6 @@
-let pessoa1 = "João";
-let pessoa2 = "Ana";
-let pessoa3 = "Carlos";
+const pessoa1 = "João";
+const pessoa2 = "Ana";
+const pessoa3 = "Carlos";
 
 function imprimirPessoas() {
     console.log(pessoa1);

@@ -1,5 +1,5 @@
 function calcularDesconto(preco) {
-    let desconto = 0.15;
+    const desconto = 0.15;
     return preco - (preco * desconto);
 }
 

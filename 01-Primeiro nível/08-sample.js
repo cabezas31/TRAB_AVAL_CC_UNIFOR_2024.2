@@ -1,7 +1,8 @@
-let pessoa = { nome: "Maria", idade: 28 };
+const pessoa = { nome: "Maria", idade: 28 };
 
 function verificarMaioridadeDeIdade(persona) {
-    return persona.idade >= 18;
+    const maiorIdade = 18;
+    return persona.idade >= maiorIdade;
 }
 
 console.log(verificarMaioridadeDeIdade(pessoa));

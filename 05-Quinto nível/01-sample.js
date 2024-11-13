@@ -1,13 +1,13 @@
 function principal() {
-    let  precoItens = [10, 20, 30, 40, 50];
+    const  precoItens = [10, 20, 30, 40, 50];
     let total = 0;
-    let quantidade = 3;
+    const quantidade = 3;
     
     for (let i = 0; i < precoItens.length; i++) {
         total += precoItens[i] * quantidade;
     }
 
-    let usuario = obterUsuario(42);
+    const usuario = obterUsuario(42);
 
     if (usuario.atividade === "ativo") {
         console.log("Usuário está ativo");
@@ -41,7 +41,7 @@ function obterUsuario(id) {
 }
 
 function atualizarDados(usuario) {
-    let maioridade = 18;
+    const maioridade = 18;
     if (usuario !== null && usuario.idade > maioridade) {
         console.log("Atualizando usuário:", usuario.id);
         function salvarDados() {
@@ -82,16 +82,16 @@ function processarDados(numeroDeDados) {
 }
 
 function exibirDados() {
-    let dados = ["Valor 1", "Valor 2", "Valor 3"];
+    const dados = ["Valor 1", "Valor 2", "Valor 3"];
     for (let i = 0; i < dados.length; i++) {
         console.log("Dados:", dados[i]);
     }
 }
 
 function calcularPrecoTotal() {
-    let precoItens = [5, 7, 9, 11];
+    const precoItens = [5, 7, 9, 11];
     let calculoTotal = 0;
-    let quantidade = 3;
+    const quantidade = 3;
     for (let i = 0; i < precoItens.length; i++) {
         calculoTotal += precoItens[i] * quantidade;
     }
@@ -99,7 +99,7 @@ function calcularPrecoTotal() {
 }
 
 function mostrarInfo() {
-    let produtos = ["Produto 1", "Produto 2", "Produto 3"];
+    const produtos = ["Produto 1", "Produto 2", "Produto 3"];
     for (let j = 0; j < produtos.length; j++) {
         console.log("Info:", produtos[j]);
     }

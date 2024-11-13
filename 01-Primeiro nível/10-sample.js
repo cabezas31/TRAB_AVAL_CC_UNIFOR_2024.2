@@ -1,10 +1,10 @@
-let usuario = {
+const usuario = {
     nome: "João",
     idade: 25
 };
 
 function identificarUsuario(persona) {
-    console.log(persona.nome + " tem " + persona.idade + " anos.");
+    console.log(`${persona.nome  } tem ${  persona.idade  } anos.`);
 }
 
-exUsr(identificarUsuario(usuario));
+identificarUsuario(usuario);

@@ -3,23 +3,32 @@ async function buscarEDetalharPlaneta(idPlaneta) {
         const resposta = await fetch(`https://swapi.dev/api/planets/${idPlaneta}/`);
         const planeta = await resposta.json();
 
+        const { name, climate, population } = planeta;
+
         const detalhesPlaneta = `
-        Nome: ${planeta.name}
-        Clima: ${planeta.climate}
-        População: ${planeta.population}
+            Nome: ${name},
+            Clima: ${climate},
+            População: ${population},
         `;
 
-        console.log("Detalhes do Planeta:");
-        console.log(detalhesPlaneta);
+        console.log(`Detalhes do Planeta:\n${detalhesPlaneta}`);
 
         const populacao = parseInt(planeta.population);
-        if (populacao > 1000000) {
-            console.log("Este planeta é muito populado.");
-        } else {
-            console.log("Este planeta tem uma população pequena.");
-        }
+
+        declaraTamanhoDaPopulacaoDoPlaneta(populacao);
+        
     } catch (erro) {
-        console.error('Erro ao buscar o planeta:', erro);
+        console.error("Erro ao buscar o planeta:", erro);
+    }
+}
+
+function declaraTamanhoDaPopulacaoDoPlaneta(populacao){
+    const populacaoMedia = 1000000;
+
+    if (populacao > populacaoMedia) {
+        console.log("Este planeta é muito populado.");
+    } else {
+        console.log("Este planeta tem uma população pequena.");
     }
 }
 

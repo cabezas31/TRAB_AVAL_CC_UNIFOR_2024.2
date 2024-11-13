@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tratamento de Erros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-3">
+    <div class="container">
+        <h1 class="mb-4">Buscar Filme</h1>
+
+        <div class="mb-3">
+            <label for="filmeId" class="form-label">Digite o ID do Filme:</label>
+            <input type="number" id="filmeId" class="form-control" placeholder="Ex: 1 para A NEW HOPE">
+        </div>
+
+        <button class="btn btn-primary" onclick="buscarFilme()">Buscar Filme</button>
+
+        <div id="mensagem" class="mt-3"></div>
+    </div>
+
+    <script src="02-sample.js"></script>
+</body>
+
+</html>

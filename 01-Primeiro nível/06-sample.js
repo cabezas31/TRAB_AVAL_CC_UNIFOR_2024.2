@@ -1,13 +1,13 @@
-let nomeUsario = "Pedro";
-let idadeUsuario = 25;
-let atividadeUsuario = true;
+const nomeUsario = "Pedro";
+const idadeUsuario = 25;
+const atividadeUsuario = true;
 
 function verificarAtividade(nomeUsario, idadeUsuario, atividadeUsuario) {
     if (atividadeUsuario) {
-        console.log(nomeUsario + " tem " + idadeUsuario + " anos e está ativo.");
+        console.log(`${nomeUsario  } tem ${  idadeUsuario  } anos e está ativo.`);
     } else {
-        console.log(nomeUsario + " está inativo.");
+        console.log(`${nomeUsario  } está inativo.`);
     }
 }
 
-atividadeUsuario(nomeUsario, idadeUsuario, atividadeUsuario);
+verificarAtividade(nomeUsario, idadeUsuario, atividadeUsuario);

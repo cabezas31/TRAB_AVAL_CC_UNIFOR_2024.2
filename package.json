@@ -1,0 +1,25 @@
+{
+  "name": "trab_aval_cc_unifor_2024.2",
+  "version": "1.0.0",
+  "description": "Trabalho Ambientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "linter": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cabezas31/TRAB_AVAL_CC_UNIFOR_2024.2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cabezas31/TRAB_AVAL_CC_UNIFOR_2024.2/issues"
+  },
+  "homepage": "https://github.com/cabezas31/TRAB_AVAL_CC_UNIFOR_2024.2#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0"
+  }
+}
