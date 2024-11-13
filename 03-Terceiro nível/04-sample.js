@@ -3,18 +3,33 @@ async function buscarPersonagemENave(idPersonagem) {
         const respostaPersonagem = await fetch(`https://swapi.dev/api/people/${idPersonagem}/`);
         const personagem = await respostaPersonagem.json();
 
-        if (personagem.starships.length > 0) {
-            const respostaNave = await fetch(personagem.starships[0]);
+        const { 
+            name: namePersonagem, 
+            starships: starshipsPersonagem 
+        } = personagem;
+
+        const qtdDeNaves = starshipsPersonagem.length;
+
+        if (qtdDeNaves > 0) {
+            const respostaNave = await fetch(starshipsPersonagem[0]);
             const nave = await respostaNave.json();
 
-            const tripulacao = parseInt(nave.crew);
-            if (tripulacao > 100) {
-                console.log(`A nave ${nave.name} é considerada grande com ${tripulacao} tripulantes.`);
+            const { 
+                name: nameNave, 
+                crew: crewNave 
+            } = nave;
+
+            const tripulacao = parseInt(crewNave);
+
+            const tripulacaoMedia = 100;
+
+            if (tripulacao > tripulacaoMedia) {
+                console.log(`A nave ${nameNave} é considerada grande com ${tripulacao} tripulantes.`);
             } else {
-                console.log(`A nave ${nave.name} é pequena com ${tripulacao} tripulantes.`);
+                console.log(`A nave ${nameNave} é pequena com ${tripulacao} tripulantes.`);
             }
         } else {
-            console.log(`${personagem.name} não possui naves registradas.`);
+            console.log(`${namePersonagem} não possui naves registradas.`);
         }
 
     } catch (erro) {
